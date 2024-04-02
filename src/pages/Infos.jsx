@@ -26,17 +26,17 @@ function Infos() {
         <Link to="/" className='border border-[#313E51] text-[#313E51] p-1 rounded-md select-none'>Zurück zur Startseite</Link>
       </div>
       
-      <p onClick={() => scrollToSection('1')} className='p-1 m-1 border border-gray-500 rounded-lg cursor-pointer'>Scroll to 1</p>
-      <p onClick={() => scrollToSection('2')} className='p-1 m-1 border border-gray-500 rounded-lg cursor-pointer'>Scroll to 2</p>
-      <p onClick={() => scrollToSection('3')} className='p-1 m-1 border border-gray-500 rounded-lg cursor-pointer'>Scroll to 3</p>
-      <p onClick={() => scrollToSection('4')} className='p-1 m-1 border border-gray-500 rounded-lg cursor-pointer'>Scroll to 4</p>
-      <p onClick={() => scrollToSection('5')} className='p-1 m-1 border border-gray-500 rounded-lg cursor-pointer'>Scroll to 5</p>
+      <div className='flex flex-row w-screen flex-wrap justify-center gap-2 items-center mb-10'>
+        <div onClick={() => scrollToSection('1')} className='p-1 m-1 bg-green-500 text-white rounded-lg cursor-pointer flex justify-center items-center gap-1'><span className="material-symbols-outlined text-green-800 bg-green-400 p-1 rounded-lg">school</span><span className="">Bildungsmöglichkeiten</span></div>
+        <div onClick={() => scrollToSection('2')} className='p-1 m-1 bg-red-500 text-white rounded-lg cursor-pointer flex justify-center items-center gap-1'><span className="material-symbols-outlined text-red-800 bg-red-400 p-1 rounded-lg">euro_symbol</span><span className="">Ausgaben</span></div>
+        <div onClick={() => scrollToSection('3')} className='p-1 m-1 bg-blue-500 text-white rounded-lg cursor-pointer flex justify-center items-center gap-1'><span className="material-symbols-outlined text-blue-800 bg-blue-400 p-1 rounded-lg">sentiment_dissatisfied</span><span className="">Spürbare Ungerechtigkeiten</span></div>
+        <div onClick={() => scrollToSection('4')} className='p-1 m-1 bg-yellow-500 text-white rounded-lg cursor-pointer flex justify-center items-center gap-1'><span className="material-symbols-outlined text-yellow-800 bg-yellow-400 p-1 rounded-lg">emoji_objects</span><span className="">Lösungsansätze</span></div>
+      </div>
 
-      <section id="section-1" className='h-screen w-screen bg-green-500 text-white'>Section 1</section>
-      <section id="section-2" className='h-screen w-screen bg-red-500 text-white'>Section 2</section>
-      <section id="section-3" className='h-screen w-screen bg-blue-500 text-white'>Section 3</section>
-      <section id="section-4" className='h-screen w-screen bg-yellow-500 text-white'>Section 4</section>
-      <section id="section-5" className='h-screen w-screen bg-purple-500 text-white'>Section 5</section>
+      <section id="section-1" className='h-screen w-screen bg-green-500 text-white'>Bildungsmöglichkeiten</section>
+      <section id="section-2" className='h-screen w-screen bg-red-500 text-white'>Ausgaben</section>
+      <section id="section-3" className='h-screen w-screen bg-blue-500 text-white'>Spürbare Ungerechtigkeiten</section>
+      <section id="section-4" className='h-screen w-screen bg-yellow-500 text-white'>Lösungsansätze</section>
     </>
   );
 }
