@@ -63,13 +63,13 @@ const Topic = () => {
                     <p className={`${selectQuestion === item ? " text-white " : "text-[#626C7F]"} text-[28px]  font-medium`}>{index === 0 ? "A" : index === 1 ? "B" : index === 2 ? "C" : "D"}</p>
                   </Icons>
                   {item}
-                  <ImageIcons src="/images/icon-correct.svg" className={`${selectQuestion === item ? check === "1" ? "block" : "hidden" : "hidden"} ml-auto`} />
-                  <ImageIcons src="/images/icon-incorrect.svg" className={`${selectQuestion === item ? check === "0" ? "block" : "hidden" : "hidden"} ml-auto`} />
+                  <ImageIcons src={`${process.env.PUBLIC_URL}/images/icon-correct.svg`} className={`${selectQuestion === item ? check === "1" ? "block" : "hidden" : "hidden"} ml-auto`} />
+                  <ImageIcons src={`${process.env.PUBLIC_URL}/images/icon-incorrect.svg`} className={`${selectQuestion === item ? check === "0" ? "block" : "hidden" : "hidden"} ml-auto`} />
                 </Button>)}
               {!check && <Button onClick={() => selectQuestion ? checkQuestion(selectQuestion) : setShowError(true)} className="p-3 bg-[#A729F5] hover:bg-[#a729f5b1] text-white justify-center">Auflösen</Button>}
               {check && <Button onClick={() => getquestion()} className="p-3 bg-[#A729F5] hover:bg-[#a729f5b1] text-white justify-center">Nächste Frage</Button>}
               {showError && <div className='flex justify-center items-center'>
-                <img src='/images/icon-incorrect.svg' alt='' className=' mx-2' />
+                <img src={`${process.env.PUBLIC_URL}/images/icon-incorrect.svg`} alt='' className=' mx-2' />
                 <p className='text-[#EE5454] text-[24px] font-normal'>Bitte wähle eine Antwort</p>
                 </div>}
             </div>
