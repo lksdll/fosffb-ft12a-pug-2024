@@ -1,6 +1,14 @@
-import React from 'react';
+import '../App.css';
+import React, { useContext } from 'react'
+import { useNavigate } from "react-router-dom";
+import {ThemeContext} from '../App'
+import { useLocation } from 'react-router-dom';
 
 function Infos() {
+  const navigate = useNavigate();
+  let location = useLocation();
+  const {theme,setTopic} = useContext(ThemeContext)
+
   // Define the function
   const scrollToSection = (SectionID) => {
     const element = document.getElementById(`section-${SectionID}`);
