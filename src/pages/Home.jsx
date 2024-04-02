@@ -42,7 +42,7 @@ export default function Home() {
     </div>
     <div className='flex flex-col justify-center'>
       <Button onClick={()=>selectTopic(0)} className="select-none p-[10px] md:p-[20px] bg-[#fff]"><span class="material-symbols-outlined p-3 mx-3 rounded-md bg-green-500/50 text-green-800">quiz</span> DAS QUIZ STARTEN </Button>
-      <Button onClick={()=>selectPage("infos")} className="select-none p-[10px] md:p-[20px] bg-[#fff]"><span class="material-symbols-outlined p-3 mx-3 rounded-md bg-red-500/50 text-red-800">lightbulb</span>Weitere Infos</Button>
+      <Button onClick={()=>setPage("infos")} className="select-none p-[10px] md:p-[20px] bg-[#fff]"><span class="material-symbols-outlined p-3 mx-3 rounded-md bg-red-500/50 text-red-800">lightbulb</span>Weitere Infos</Button>
       {/*<Button onClick={()=>selectTopic(2)} className=" p-[10px] md:p-[20px] bg-[#fff]"><Icons bgcolor="bg-[#EBF0FF] p-1"><ImageIcons src="/images/icon-js.svg"/></Icons>Javascript</Button>
   <Button onClick={()=>selectTopic(3)} className=" p-[10px] md:p-[20px] bg-[#fff]"><Icons bgcolor="bg-[#F6E7FF] p-1"><ImageIcons src="/images/icon-accessibility.svg"/></Icons>Accessibility</Button>*/}
     </div>
