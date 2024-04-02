@@ -1,9 +1,9 @@
 import './App.css';
 import React, {  useState } from 'react'
 import {
-  createBrowserRouter,
-  RouterProvider,
-} from "react-router-dom";
+  createHashRouter,
+  RouterProvider
+} from 'react-router-dom';
 import Home from './pages/Home';
 import Topic from './pages/Topic';
 import Infos from './pages/Infos';
@@ -17,7 +17,7 @@ export default function App() {
   const[topic, setTopic] = useState()
   const data = require('./data.json');
 
-  const router = createBrowserRouter([
+  const router = createHashRouter([
   {
     path: "/",
     element: <Home />,
