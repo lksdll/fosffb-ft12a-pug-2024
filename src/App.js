@@ -8,7 +8,6 @@ import Home from './pages/Home';
 import Topic from './pages/Topic';
 import Infos from './pages/Infos';
 import Error from './pages/Error';
-import Header from './components/Header';
 
 const ThemeContext = React.createContext()
 
@@ -45,7 +44,6 @@ const settheme = () => {
   return (
     <>
      <ThemeContext.Provider value={{theme,settheme,data,setTopic}}>
-      <Header id={topic}/> 
      <RouterProvider router={router} />
      </ThemeContext.Provider>
     </>
