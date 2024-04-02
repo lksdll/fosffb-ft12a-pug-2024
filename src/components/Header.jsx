@@ -3,6 +3,7 @@ import Icons from './Icons'
 import { ThemeContext } from '../App';
 import { Switch } from 'antd';
 
+
 const Header = ({id}) => {
 
   const {theme,settheme,data} = useContext(ThemeContext)
@@ -15,11 +16,11 @@ const Header = ({id}) => {
           <div className={` ${!theme?"text-[#F4F6FA]":"text-[#313E51]"} font-medium text-[28px]`}>{selectTopic?.title}</div>
       </div>
       <div className='flex items-center'>
-      <img className='select-none'  src={`${theme?"/images/icon-moon-dark.svg":"/images/icon-moon-light.svg"}`} alt='' />
+      <img className='select-none'  src={`${process.env.PUBLIC_URL}/images/icon-moon-dark.svg`} alt='' />
         {/* <button onClick={()=>settheme()} className="mx-5 cursor-pointer"> */}
         <Switch defaultChecked onChange={settheme} colorPrimary="#EE5454" className='mx-3 bg-[#EE5454]'/>
         {/* </button> */}
-        <img className='select-none' src={`${theme?"/images/icon-sun-dark.svg":"/images/icon-sun-light.svg"}`} alt='' />
+        <img className='select-none' src={`${process.env.PUBLIC_URL}/images/icon-sun-dark.svg`} alt='' />
         
       </div>
     </div>
