@@ -2,11 +2,10 @@ import '../App.css';
 import React, { useContext } from 'react'
 import { useNavigate } from "react-router-dom";
 import {ThemeContext} from '../App'
-import { useLocation } from 'react-router-dom';
+import Link from 'react-router-dom';
 
 function Infos() {
   const navigate = useNavigate();
-  let location = useLocation();
   const {theme,setTopic} = useContext(ThemeContext)
 
   // Define the function
@@ -20,6 +19,7 @@ function Infos() {
   return (
     <>
 
+      <Link to="/" className='bg-blue-500 p-1 rounded-md text-white select-none'>Zurück zur Startseite</Link>
       <p onClick={() => scrollToSection('1')} className='p-1 m-1 border border-gray-500 rounded-lg cursor-pointer'>Scroll to 1</p>
       <p onClick={() => scrollToSection('2')} className='p-1 m-1 border border-gray-500 rounded-lg cursor-pointer'>Scroll to 2</p>
       <p onClick={() => scrollToSection('3')} className='p-1 m-1 border border-gray-500 rounded-lg cursor-pointer'>Scroll to 3</p>

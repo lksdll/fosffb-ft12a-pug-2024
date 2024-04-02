@@ -1,9 +1,8 @@
 import '../App.css';
 import React, { useState, useEffect } from 'react';
-import { useLocation, Link } from 'react-router-dom';
+import Link from 'react-router-dom';
 
 function Error() {
-    let location = useLocation();
 
     const [text, setText] = useState('');
     const [index, setIndex] = useState(0);
