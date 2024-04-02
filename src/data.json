@@ -103,6 +103,16 @@
                         "It hides the fields in a form."
                     ],
                     "answer": "It is used to group related data in a form."
+                },
+                {
+                    "question": "What attribute is used to provide the path of an image in the <img> tag?",
+                    "options": [
+                        "link",
+                        "src",
+                        "href",
+                        "url"
+                    ],
+                    "answer": "src"
                 }
             ]
         },

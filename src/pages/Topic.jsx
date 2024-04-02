@@ -49,12 +49,12 @@ const Topic = () => {
         <div className='flex flex-col h-screen justify-center'>
           <div className='lg:grid lg:grid-cols-2 lg:gap-x-36'>
             <div className='mb-10 md:my-0'>
-              {questionNo < 9 && <p className={` ${!theme ? "text-[#F4F6FA]" : "text-[#626C7F]"} text-[14px] md:text-[20px] font-normal italic`}>{`Frage ${questionNo + 1} von 10`}</p>}
-              {questionNo < 9 ? <h1 className={`${!theme ? "text-[#F4F6FA]" : "text-[#313E51]"} text-[20px] md:text-[36px] font-medium mt-10`}>{selectTopic.questions[questionNo].question}</h1> : <h1 className={` ${!theme ? "text-[#F4F6FA]" : "text-[#313E51]"} text-[40px] md:text-[64px] font-light`}>Quiz abgeschlossen<br /><span className='font-medium'>Dein Ergebnis...</span></h1>}
+              {questionNo < selectTopic.questions.length && <p className={` ${!theme ? "text-[#F4F6FA]" : "text-[#626C7F]"} text-[14px] md:text-[20px] font-normal italic`}>{`Frage ${questionNo + 1} von ${selectTopic.questions.length}`}</p>}
+              {questionNo < selectTopic.questions.length ? <h1 className={`${!theme ? "text-[#F4F6FA]" : "text-[#313E51]"} text-[20px] md:text-[36px] font-medium mt-10`}>{selectTopic.questions[questionNo].question}</h1> : <h1 className={` ${!theme ? "text-[#F4F6FA]" : "text-[#313E51]"} text-[40px] md:text-[64px] font-light`}>Quiz abgeschlossen<br /><span className='font-medium'>Dein Ergebnis...</span></h1>}
             </div>
 
 
-            {questionNo < 9 ?
+            {questionNo < selectTopic.questions.length ?
             
             <div className=''>
               {selectTopic.questions[questionNo].options.map((item, index) => /** need to look at data.json and get answer to show correct option if user chooses false option */
@@ -87,9 +87,9 @@ const Topic = () => {
                   <div className='flex justify-center items-center'>
                     <h1 className='text-[144px] text-[#313E51] font-medium'>{result}</h1>
                   </div>
-                  <p className='text-[24px] font-normal text-[#626C7F] text-center'>von 10</p>
+                  <p className='text-[24px] font-normal text-[#626C7F] text-center'>von {selectTopic.questions.length}</p>
                 </div>
-                <Button onClick={() => startQuiz()} className="p-3 bg-[#A729F5] hover:bg-[#a729f5b1] text-white justify-center">Nochmal Spielen</Button>
+                <Button onClick={() => startQuiz()} className="p-3 bg-[#A729F5] hover:bg-[#a729f5b1] text-white justify-center">Zurück zur Startseite</Button>
               </div>}
           </div>
         </div>
