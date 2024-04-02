@@ -2,7 +2,7 @@ import '../App.css';
 import React, { useContext } from 'react'
 import { useNavigate } from "react-router-dom";
 import {ThemeContext} from '../App'
-import Link from 'react-router-dom';
+import { useLocation, Link } from 'react-router-dom';
 
 function Infos() {
   const navigate = useNavigate();
