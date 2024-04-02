@@ -10,10 +10,10 @@ const Header = ({id}) => {
   const selectTopic = data.quizzes[id]
 
   return (
-    <div className={`flex justify-between items-center p-5 ${!theme?"text-[#F4F6FA]":"text-[#313E51]"} w-full`}>
+    <div className={`flex justify-between items-center p-5 text-[#313E51] w-full`}>
        <div className='flex justify-center items-center'>
           {selectTopic?.icon&&<Icons bgcolor={`bg-[#F4F6FA]`}><img src={selectTopic?.icon} alt="" className={`${selectTopic?.icon&&"w-10"}`}/></Icons>}
-          <div className={` ${!theme?"text-[#F4F6FA]":"text-[#313E51]"} font-medium text-[28px]`}>{selectTopic?.title}</div>
+          <div className={`text-[#313E51] font-medium text-[28px]`}>{selectTopic?.title}</div>
       </div>
       <div className='flex items-center'>
       <img className='select-none'  src={`${process.env.PUBLIC_URL}/images/icon-moon-dark.svg`} alt='' />
