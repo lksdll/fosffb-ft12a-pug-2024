@@ -43,14 +43,13 @@ const Topic = () => {
   }
 
   return (
-    <div className={`${theme ? "bg-[#F4F6FA]" : "bg-[#313E51]"}`}>
       <div className='lg:max-w-7xl lg:mx-auto  px-5 md:px-14 lg:px-0 '>
 
         <div className='flex flex-col h-screen justify-center'>
           <div className='lg:grid lg:grid-cols-2 lg:gap-x-36'>
             <div className='mb-10 md:my-0'>
-              {questionNo < selectTopic.questions.length && <p className={` ${!theme ? "text-[#F4F6FA]" : "text-[#626C7F]"} text-[14px] md:text-[20px] font-normal italic`}>{`Frage ${questionNo + 1} von ${selectTopic.questions.length}`}</p>}
-              {questionNo < selectTopic.questions.length ? <h1 className={`${!theme ? "text-[#F4F6FA]" : "text-[#313E51]"} text-[20px] md:text-[36px] font-medium mt-10`}>{selectTopic.questions[questionNo].question}</h1> : <h1 className={` ${!theme ? "text-[#F4F6FA]" : "text-[#313E51]"} text-[40px] md:text-[64px] font-light`}>Quiz abgeschlossen<br /><span className='font-medium'>Dein Ergebnis...</span></h1>}
+              {questionNo < selectTopic.questions.length && <p className={` text-[#626C7F] text-[14px] md:text-[20px] font-normal italic`}>{`Frage ${questionNo + 1} von ${selectTopic.questions.length}`}</p>}
+              {questionNo < selectTopic.questions.length ? <h1 className={`text-[#313E51] text-[20px] md:text-[36px] font-medium mt-10`}>{selectTopic.questions[questionNo].question}</h1> : <h1 className={`text-[#313E51] text-[40px] md:text-[64px] font-light`}>Quiz abgeschlossen<br /><span className='font-medium'>Dein Ergebnis...</span></h1>}
             </div>
 
 
@@ -58,7 +57,7 @@ const Topic = () => {
             
             <div className=''>
               {selectTopic.questions[questionNo].options.map((item, index) => /** need to look at data.json and get answer to show correct option if user chooses false option */
-                <Button onClick={() => !check && setSelectQuestion(item)} key={index} className={`p-3  ${!theme ? "text-[#FFF]" : "text-[#3B4D66] bg-white hover:bg-[#F6E7FF]"}   border-[3px]  ${selectQuestion === item ? check === "1" ? "border-[#26D782]" : check === "0" ? "border-[#EE5454]" : "border-[#A729F5]" : item === selectTopic.questions[questionNo].answer && check !== "" ? "border-[#26D782]" : ""}`}>
+                <Button onClick={() => !check && setSelectQuestion(item)} key={index} className={`p-3 select-none text-[#3B4D66] bg-white hover:bg-[#F6E7FF] border-[3px]  ${selectQuestion === item ? check === "1" ? "border-[#26D782]" : check === "0" ? "border-[#EE5454]" : "border-[#A729F5]" : item === selectTopic.questions[questionNo].answer && check !== "" ? "border-[#26D782]" : ""}`}>
                   <Icons bgcolor={` ${selectQuestion === item ? check === "1" ? "bg-[#26D782]" : check === "0" ? "bg-[#EE5454]" : " bg-[#A729F5] " : "bg-[#F4F6FA]"}  px-4 py-2`}>
                     <p className={`${selectQuestion === item ? " text-white " : "text-[#626C7F]"} text-[28px]  font-medium`}>{index === 0 ? "A" : index === 1 ? "B" : index === 2 ? "C" : "D"}</p>
                   </Icons>
@@ -66,8 +65,8 @@ const Topic = () => {
                   <ImageIcons src={`${process.env.PUBLIC_URL}/images/icon-correct.svg`} className={`${selectQuestion === item ? check === "1" ? "block" : "hidden" : "hidden"} ml-auto`} />
                   <ImageIcons src={`${process.env.PUBLIC_URL}/images/icon-incorrect.svg`} className={`${selectQuestion === item ? check === "0" ? "block" : "hidden" : "hidden"} ml-auto`} />
                 </Button>)}
-              {!check && <Button onClick={() => selectQuestion ? checkQuestion(selectQuestion) : setShowError(true)} className="p-3 bg-[#A729F5] hover:bg-[#a729f5b1] text-white justify-center">Auflösen</Button>}
-              {check && <Button onClick={() => getquestion()} className="p-3 bg-[#A729F5] hover:bg-[#a729f5b1] text-white justify-center">Nächste Frage</Button>}
+              {!check && <Button onClick={() => selectQuestion ? checkQuestion(selectQuestion) : setShowError(true)} className="p-3 bg-[#A729F5] hover:bg-[#a729f5b1] text-white justify-center select-none">Auflösen</Button>}
+              {check && <Button onClick={() => getquestion()} className="p-3 bg-[#A729F5] hover:bg-[#a729f5b1] text-white justify-center select-none">Nächste Frage</Button>}
               {showError && <div className='flex justify-center items-center'>
                 <img src={`${process.env.PUBLIC_URL}/images/icon-incorrect.svg`} alt='' className=' mx-2' />
                 <p className='text-[#EE5454] text-[24px] font-normal'>Bitte wähle eine Antwort</p>
@@ -81,7 +80,6 @@ const Topic = () => {
               <div>
                 <div className='bg-white shadow-2xl rounded-2xl w-full p-10 '>
                   <div className='flex justify-center items-center'>
-                    <Icons bgcolor={`bg-[#F4F6FA]`}><img src={selectTopic.icon} alt="" className='w-10' /></Icons>
                     <div className='text-[#313E51] font-medium text-[28px]'>{selectTopic.title}</div>
                   </div>
                   <div className='flex justify-center items-center'>
@@ -89,12 +87,11 @@ const Topic = () => {
                   </div>
                   <p className='text-[24px] font-normal text-[#626C7F] text-center'>von {selectTopic.questions.length}</p>
                 </div>
-                <Button onClick={() => startQuiz()} className="p-3 bg-[#A729F5] hover:bg-[#a729f5b1] text-white justify-center">Zurück zur Startseite</Button>
+                <Button onClick={() => startQuiz()} className="p-3 bg-[#A729F5] hover:bg-[#a729f5b1] text-white justify-center select-none">Zurück zur Startseite</Button>
               </div>}
           </div>
         </div>
       </div>
-    </div>
   )
 
 }

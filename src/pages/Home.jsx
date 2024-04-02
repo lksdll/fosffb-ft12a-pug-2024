@@ -36,7 +36,7 @@ export default function Home() {
     <div className='flex flex-col h-screen justify-center  '>
     <div className='lg:grid lg:grid-cols-2 md:pt-0'>
     <div className='mb-14 lg:mb-0'>
-      <h1 className={`${!theme?"text-[#F4F6FA]":"text-[#313E51]"} text-[40px] md:text-[64px] font-light`}>Soziale Ungerechtigkeit im Bereich <br/><span className='font-medium'>Bildung</span></h1>
+      <h1 className={`text-[#313E51] text-[40px] md:text-[64px] font-light`}>Soziale Ungerechtigkeit im Bereich <br/><span className='font-medium'>Bildung</span></h1>
       <p className='lg:text-[#626C7F] text-[14px] md:text-[20px] mt-5 italic'><TypeWriterText inputText={"im Landkreis Fürstenfeldbruck"}></TypeWriterText></p>
     </div>
     <div className='flex flex-col justify-center'>
