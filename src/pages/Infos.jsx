@@ -33,10 +33,60 @@ function Infos() {
         <div onClick={() => scrollToSection('4')} className='select-none p-1 m-1 bg-yellow-500 text-white rounded-lg cursor-pointer flex justify-center items-center gap-1'><span className="material-symbols-outlined text-yellow-800 bg-yellow-400 p-1 rounded-lg">emoji_objects</span><span className="">Lösungsansätze</span></div>
       </div>
 
-      <section id="section-1" className='h-screen w-screen border-8 border-green-500 text-white flex flex-wrap justify-center items-center'><div className='rounded-lg p-2 bg-green-500'>Bildungsmöglichkeiten</div></section>
-      <section id="section-2" className='h-screen w-screen border-8 border-red-500 text-white flex flex-wrap justify-center items-center'><div className='rounded-lg p-2 bg-red-500'>Ausgaben</div></section>
-      <section id="section-3" className='h-screen w-screen border-8 border-blue-500 text-white flex flex-wrap justify-center items-center'><div className='rounded-lg p-2 bg-blue-500'>Spürbare Ungerechtigkeiten</div></section>
-      <section id="section-4" className='h-screen w-screen border-8 border-yellow-500 text-white flex flex-wrap justify-center items-center'><div className='rounded-lg p-2 bg-yellow-500'>Lösungsansätze</div></section>
+
+      <section id="section-1" className='h-screen w-screen border-8 border-green-500 flex flex-wrap flex-col gap-2 justify-center items-center'>
+        <div className='rounded-lg text-white p-2 bg-green-500'>Bildungsmöglichkeiten</div>
+
+        <ul className=''>
+          <li>
+          1. Schulen
+            <ol>
+              <li><a className='underline' href='https://www.lra-ffb.de/bildung-wirtschaft/schulen'>https://www.lra-ffb.de/bildung-wirtschaft/schulen</a></li>
+              <li><a className='underline' href='https://www.lra-ffb.de/bildung-wirtschaft/schulen/gymnasien'>Gymnasien</a></li>
+              <li><a className='underline' href='https://www.lra-ffb.de/bildung-wirtschaft/schulen/realschulen'>Realschulen</a></li>
+              <li><a className='underline' href='https://www.lra-ffb.de/bildung-wirtschaft/schulen/berufliche-schulen'>Berufliche Schulen</a></li>
+              <li><a className='underline' href='https://www.lra-ffb.de/bildung-wirtschaft/schulen/foerderschulen'>Sonderpädagogische Förderzentren</a></li>
+              <li><a className='underline' href='https://www.lra-ffb.de/bildung-wirtschaft/schulen/grund-und-mittelschulen'>Grund und Mittelschulen</a></li>
+              <li><a className='underline' href='https://www.lra-ffb.de/bildung-wirtschaft/schulen/privatschulen'>Privatschulen</a></li>
+              <li><a className='underline' href='https://www.lra-ffb.de/bildung-wirtschaft/schulen/medienzentrum'>Medienzentrum</a></li>
+              <li><a className='underline' href='https://www.lra-ffb.de/bildung-wirtschaft/schulen/musikschulen'>Musikschulen</a></li>
+              <li><a className='underline' href='https://www.lra-ffb.de/bildung-wirtschaft/schulen/erwachsenenbildung'>Erwachsenenbildung</a></li>
+            </ol>
+          </li>
+        </ul>
+
+      </section>
+
+      <section id="section-2" className='h-screen w-screen border-8 border-red-500 text-white flex flex-wrap justify-center items-center'>
+        <div className='rounded-lg p-2 bg-red-500'>Ausgaben</div>
+      </section>
+      
+      <section id="section-3" className='h-screen w-screen border-8 border-blue-500 text-white flex flex-wrap justify-center items-center'>
+        <div className='rounded-lg p-2 bg-blue-500'>Spürbare Ungerechtigkeiten</div>
+      </section>
+
+      <section id="section-4" className='h-screen w-screen border-8 border-yellow-500  flex flex-wrap justify-center items-center flex-col gap-2'>
+        <div className='rounded-lg p-2 bg-yellow-500 text-white'>Lösungsansätze</div>
+        
+        <ul className=''>
+          <li>
+          1. Bildungspaket
+            <ol>
+              <li><a className='underline' href='https://www.lra-ffb.de/gesundheit-soziales-asyl/kinder-jugendliche-und-familien/bildung-und-teilhabe'>https://www.lra-ffb.de/gesundheit-soziales-asyl/kinder-jugendliche-und-familien/bildung-und-teilhabe</a></li>
+              <li><a className='underline' href='https://www.lra-ffb.de/gesundheit-soziales-asyl/kinder-jugendliche-und-familien/bildung-und-teilhabe/leistungen-des-bildungspaketse'>https://www.lra-ffb.de/gesundheit-soziales-asyl/kinder-jugendliche-und-familien/bildung-und-teilhabe/leistungen-des-bildungspaketse</a></li>
+            </ol>
+          </li>
+
+          <li>2.Finanzielle Unterstützung
+            <ol>
+              <li>
+              <a className='underline' href='https://www.lra-ffb.de/gesundheit-soziales-asyl/kinder-jugendliche-und-familien/finanzielle-unterstuetzung'>https://www.lra-ffb.de/gesundheit-soziales-asyl/kinder-jugendliche-und-familien/finanzielle-unterstuetzung</a>
+              </li>
+            </ol>
+          </li>
+        </ul>
+
+      </section>
     </>
   );
 }
